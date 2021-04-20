@@ -1,0 +1,93 @@
+.sidebar {
+    width: 48px;
+    height: calc(100vh - 90px);
+    background: var(--sidebar);
+    transition: width .3s ease;
+    position: relative;
+    padding: 0 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sbExtend {
+    width: 47px;
+    height: 48px;
+    position: relative;
+    border: 0;
+    background: inherit;
+    text-align: left;
+    color: var(--text);
+    transition: .1s;
+    font-family: FLNTREG;
+    font-size: 20px;
+    padding-left: 14px;
+}
+
+.sbExtend:hover {
+    background: var(--btn-hover);
+}
+
+.sbItems {
+    display: flex;
+    flex-direction: column;
+}
+
+.sbiTab {
+    width: 100%;
+    min-width: 344px;
+    height: 48px;
+    background: inherit;
+    transition: .1s;
+    display: flex;
+    align-items: center;
+}
+
+.sbiTab:hover {
+    background: var(--btn-hover);
+}
+
+.sbtiText {
+    font-size: 14px;
+    color: var(--text);
+    margin-left: 5px;
+    pointer-events: none;
+}
+
+.sbiSep {
+    margin: 0 auto;
+    width: 255px;
+    height: 0;
+    background: var(--btn-hover);
+}
+
+.sbt1 {
+    border: solid 4px transparent;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-color: var(--accent);
+}
+
+.sbt2,
+.sbt3,
+.sbt4,
+.sbt5 {
+    border: solid 4px transparent;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.sbtiIcon {
+    z-index: 5;
+    margin-left: -3px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: FLNTREG;
+    color: var(--text);
+    font-size: 18px;
+    height: 48px;
+    width: 44px;
+    pointer-events: none;
+}

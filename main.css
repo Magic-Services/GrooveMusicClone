@@ -1,0 +1,61 @@
+@media (prefers-color-scheme: dark) {
+     :root {
+        --dm-white: hsl(0, 0%, 100%);
+        --lm-white: hsl(0, 0%, 0%);
+        --accent: hsl(261, 55%, 49%);
+        --text: hsl(0, 0%, 100%);
+        --btn-hover: hsl(100, 100%, 100%, .1);
+        --sidebar: hsl(0, 0%, 17%);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        --dm-white: hsl(0, 0%, 0%);
+        --lm-white: hsl(0, 0%, 100%);
+        --accent: hsl(261, 54%, 20%);
+        --text: hsl(0, 0%, 0%);
+        --btn-hover: hsl(0, 0%, 0%, .1);
+        --sidebar: hsl(0, 0%, 95%);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: SUIReg;
+}
+
+.main {
+    width: 100vw;
+    height: calc(100vh - 90px);
+    background: var(--lm-white);
+    padding-left: 24px;
+    color: var(--text);
+}
+
+.mainHead {
+    margin: 15px 0 0 0;
+    font-family: SUILight;
+    font-size: 35px;
+    pointer-events: none;
+}
+
+.mainTab {
+    position: absolute;
+    opacity: 1;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+#mainRP,
+#mainNP,
+#mainPL,
+#mainST {
+    opacity: 0;
+}

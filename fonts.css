@@ -1,0 +1,47 @@
+@font-face {
+    font-family: SUILight;
+    src: url(fonts/seg1.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: SUISemiLight;
+    src: url(fonts/seg2.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: SUIReg;
+    src: url(fonts/seg3.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: SUISemiBold;
+    src: url(fonts/seg4.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: SUIBold;
+    src: url(fonts/seg5.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: SUIBlack;
+    src: url(fonts/seg6.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: FLNTFILL;
+    src: url(fonts/flnt_fill.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: FLNTREG;
+    src: url(fonts/flnt_reg.ttf);
+    font-weight: 100;
+}

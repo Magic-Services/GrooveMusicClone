@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="playerBar.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="fonts.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groove Music</title>
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <button class="sbExtend" id="sbExtend" onClick="sidebarExt()"></button>
+        <section class="sbItems">
+
+            <div class="sbiSearch"></div>
+
+            <div class="sbiTab sbt1" id="sbiTab1" onclick="sbTab1()">
+                <div class="sbtiIcon">ﰴ</div>
+                <div class="sbtiText" id="sbtiText">My music</div>
+            </div>
+
+            <div class="sbiTab sbt2" id="sbiTab2" onclick="sbTab2()">
+                <div class="sbtiIcon"></div>
+                <div class="sbtiText" id="sbtiText">Recently played</div>
+            </div>
+
+            <div class="sbiTab sbt3" id="sbiTab3" onclick="sbTab3()">
+                <div class="sbtiIcon"></div>
+                <div class="sbtiText" id="sbtiText">Now playing</div>
+            </div>
+
+            <div class="sbiSep sbs1" id="sbiSep1"></div>
+
+            <div class="sbiTab sbt4" id="sbiTab4" onclick="sbTab4()">
+                <div class="sbtiIcon"></div>
+                <div class="sbtiText" id="sbtiText">Playlists</div>
+            </div>
+
+            <div class="sbiSep sbs2" id="sbiSep2"></div>
+
+            <div class="sbiTab sbt5" id="sbiTab5" onclick="sbTab5()">
+                <div class="sbtiIcon"></div>
+                <div class="sbtiText" id="sbtiText">?Settings</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="main">
+        <div class="mainHead" id="mainHead">My music</div>
+        <div class="mainTab" id="mainMM">My music tab</div>
+        <div class="mainTab" id="mainRP">Recently played tab</div>
+        <div class="mainTab" id="mainNP">Now playing tab</div>
+        <div class="mainTab" id="mainPL">Playlists tab</div>
+        <div class="mainTab" id="mainST">?SETTINGS tab</div>
+    </div>
+
+    <div class="playingBar">
+        <div class="songInfo">
+            <div class="siHover"></div>
+            <div class="albArt"></div>
+            <div class="siText">
+                <div class="sitTitle">Sample Song</div>
+                <div class="sitArtist">Sample Artist</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('click', function(e) {
+            if (!document.getElementById('sbExtend').contains(e.target) && (!document.getElementById('sidebar').contains(e.target))) {
+                document.getElementById('sidebar').style.width = "48px";
+                document.getElementById('sbiSep1').style.height = "0"
+                document.getElementById('sbiSep2').style.height = "0"
+            }
+        })
+
+        function sidebarExt() {
+            document.getElementById('sidebar').style.width = "320px";
+            document.getElementById('sbiSep1').style.height = "1px"
+            document.getElementById('sbiSep2').style.height = "1px"
+        }
+
+        function sbTab1() {
+            document.getElementById('sbiTab1').style.borderLeftColor = "var(--accent)"
+            document.getElementById('sbiTab2').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab3').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab4').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab5').style.borderLeftColor = "transparent"
+                /**/
+            document.getElementById('mainHead').innerHTML = "My music"
+            document.getElementById('sidebar').style.width = "48px";
+            /**/
+            document.getElementById('sbiSep1').style.height = "0"
+            document.getElementById('sbiSep2').style.height = "0"
+                /**/
+            document.getElementById('mainMM').style.opacity = "1"
+            document.getElementById('mainRP').style.opacity = "0"
+            document.getElementById('mainNP').style.opacity = "0"
+            document.getElementById('mainPL').style.opacity = "0"
+            document.getElementById('mainST').style.opacity = "0"
+        }
+
+        function sbTab2() {
+            document.getElementById('sbiTab1').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab2').style.borderLeftColor = "var(--accent)"
+            document.getElementById('sbiTab3').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab4').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab5').style.borderLeftColor = "transparent"
+                /**/
+            document.getElementById('mainHead').innerHTML = "Recently played"
+            document.getElementById('sidebar').style.width = "48px";
+            /**/
+            document.getElementById('sbiSep1').style.height = "0"
+            document.getElementById('sbiSep2').style.height = "0"
+                /**/
+            document.getElementById('mainMM').style.opacity = "0"
+            document.getElementById('mainRP').style.opacity = "1"
+            document.getElementById('mainNP').style.opacity = "0"
+            document.getElementById('mainPL').style.opacity = "0"
+            document.getElementById('mainST').style.opacity = "0"
+        }
+
+        function sbTab3() {
+            document.getElementById('sbiTab1').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab2').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab3').style.borderLeftColor = "var(--accent)"
+            document.getElementById('sbiTab4').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab5').style.borderLeftColor = "transparent"
+                /**/
+            document.getElementById('mainHead').innerHTML = "Now playing"
+            document.getElementById('sidebar').style.width = "48px";
+            /**/
+            document.getElementById('sbiSep1').style.height = "0"
+            document.getElementById('sbiSep2').style.height = "0"
+                /**/
+            document.getElementById('mainMM').style.opacity = "0"
+            document.getElementById('mainRP').style.opacity = "0"
+            document.getElementById('mainNP').style.opacity = "1"
+            document.getElementById('mainPL').style.opacity = "0"
+            document.getElementById('mainST').style.opacity = "0"
+        }
+
+        function sbTab4() {
+            document.getElementById('sbiTab1').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab2').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab3').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab4').style.borderLeftColor = "var(--accent)"
+            document.getElementById('sbiTab5').style.borderLeftColor = "transparent"
+                /**/
+            document.getElementById('mainHead').innerHTML = "Playlists"
+            document.getElementById('sidebar').style.width = "48px";
+            /**/
+            document.getElementById('sbiSep1').style.height = "0"
+            document.getElementById('sbiSep2').style.height = "0"
+                /**/
+            document.getElementById('mainMM').style.opacity = "0"
+            document.getElementById('mainRP').style.opacity = "0"
+            document.getElementById('mainNP').style.opacity = "0"
+            document.getElementById('mainPL').style.opacity = "1"
+            document.getElementById('mainST').style.opacity = "0"
+        }
+
+        function sbTab5() {
+            document.getElementById('sbiTab1').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab2').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab3').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab4').style.borderLeftColor = "transparent"
+            document.getElementById('sbiTab5').style.borderLeftColor = "var(--accent)"
+                /**/
+            document.getElementById('mainHead').innerHTML = "?Settings"
+            document.getElementById('sidebar').style.width = "48px";
+            /**/
+            document.getElementById('sbiSep1').style.height = "0"
+            document.getElementById('sbiSep2').style.height = "0"
+                /**/
+            document.getElementById('mainMM').style.opacity = "0"
+            document.getElementById('mainRP').style.opacity = "0"
+            document.getElementById('mainNP').style.opacity = "0"
+            document.getElementById('mainPL').style.opacity = "0"
+            document.getElementById('mainST').style.opacity = "1"
+        }
+    </script>
+
+</body>
+
+</html>
