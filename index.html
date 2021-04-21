@@ -18,7 +18,13 @@
         <button class="sbExtend" id="sbExtend" onClick="sidebarExt()"></button>
         <section class="sbItems">
 
-            <div class="sbiSearch"></div>
+            <div class="sbiSearch">
+                <div class="sbisCol" id="sbisCol"></div>
+                <div class="sbisExp" id="sbisExp">
+                    <p id="se1"></p>
+                    <p id="se2">Search</p>
+                </div>
+            </div>
 
             <div class="sbiTab sbt1" id="sbiTab1" onclick="sbTab1()">
                 <div class="sbtiIcon">ﰴ</div>
@@ -78,6 +84,8 @@
                 document.getElementById('sidebar').style.width = "48px";
                 document.getElementById('sbiSep1').style.height = "0"
                 document.getElementById('sbiSep2').style.height = "0"
+                document.getElementById('sbisExp').style.display = "none"
+                document.getElementById('sbisCol').style.display = "inline-flex"
             }
         })
 
@@ -85,6 +93,8 @@
             document.getElementById('sidebar').style.width = "320px";
             document.getElementById('sbiSep1').style.height = "1px"
             document.getElementById('sbiSep2').style.height = "1px"
+            document.getElementById('sbisExp').style.display = "inline-flex"
+            document.getElementById('sbisCol').style.display = "none"
         }
 
         function sbTab1() {
@@ -105,6 +115,9 @@
             document.getElementById('mainNP').style.opacity = "0"
             document.getElementById('mainPL').style.opacity = "0"
             document.getElementById('mainST').style.opacity = "0"
+                /**/
+            document.getElementById('sbisExp').style.display = "none"
+            document.getElementById('sbisCol').style.display = "inline-flex"
         }
 
         function sbTab2() {
@@ -125,6 +138,9 @@
             document.getElementById('mainNP').style.opacity = "0"
             document.getElementById('mainPL').style.opacity = "0"
             document.getElementById('mainST').style.opacity = "0"
+                /**/
+            document.getElementById('sbisExp').style.display = "none"
+            document.getElementById('sbisCol').style.display = "inline-flex"
         }
 
         function sbTab3() {
@@ -145,6 +161,9 @@
             document.getElementById('mainNP').style.opacity = "1"
             document.getElementById('mainPL').style.opacity = "0"
             document.getElementById('mainST').style.opacity = "0"
+                /**/
+            document.getElementById('sbisExp').style.display = "none"
+            document.getElementById('sbisCol').style.display = "inline-flex"
         }
 
         function sbTab4() {
@@ -165,6 +184,9 @@
             document.getElementById('mainNP').style.opacity = "0"
             document.getElementById('mainPL').style.opacity = "1"
             document.getElementById('mainST').style.opacity = "0"
+                /**/
+            document.getElementById('sbisExp').style.display = "none"
+            document.getElementById('sbisCol').style.display = "inline-flex"
         }
 
         function sbTab5() {
@@ -185,6 +207,9 @@
             document.getElementById('mainNP').style.opacity = "0"
             document.getElementById('mainPL').style.opacity = "0"
             document.getElementById('mainST').style.opacity = "1"
+                /**/
+            document.getElementById('sbisExp').style.display = "none"
+            document.getElementById('sbisCol').style.display = "inline-flex"
         }
     </script>
 
