@@ -31,6 +31,7 @@
 .sbItems {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .sbiTab,
@@ -122,4 +123,8 @@
     font-size: 14px;
     padding-bottom: 2px;
     opacity: .6;
+}
+
+.sbs2 {
+    margin-top: auto;
 }
