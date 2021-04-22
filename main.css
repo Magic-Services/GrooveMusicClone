@@ -53,6 +53,7 @@ body {
     opacity: 1;
     margin-top: 20px;
     transition: .2s;
+    width: 90vw;
 }
 
 #mainRP,
@@ -60,4 +61,68 @@ body {
 #mainPL,
 #mainST {
     opacity: 0;
+}
+
+#mainMM {
+    display: flex;
+}
+
+.mmmTabBar {
+    width: 100vw;
+    height: 1px;
+    margin-top: 35px;
+    background: var(--btn-hover);
+    display: flex;
+    gap: 40px;
+}
+
+.tbBtn {
+    position: relative;
+    height: 35px;
+    width: fit-content;
+    position: relative;
+    top: -35px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: var(--lm-white);
+    font-size: 20px;
+    font-family: SUIReg;
+    text-align: left;
+    padding: 0;
+    opacity: .8;
+    transition: .2s;
+}
+
+.tbBtn:hover {
+    opacity: 1;
+}
+
+.tbbSongs {
+    border-bottom: 2px solid var(--accent);
+    opacity: 1;
+}
+
+.rpShuffle {
+    display: flex;
+    width: fit-content;
+    height: 25px;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    padding: 15px 15px 15px 8px;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.rpShuffle:hover {
+    background: var(--btn-hover);
+}
+
+.rpsIcon {
+    font-family: FLNTREG;
+    font-size: 20px;
+}
+
+.rpsText {
+    font-size: 13px;
 }

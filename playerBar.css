@@ -127,8 +127,8 @@
 }
 
 .timeBar {
-    width: 350px;
-    height: 5px;
+    width: 25vw;
+    height: 3px;
     border-radius: 10px;
     background: white;
     display: flex;
@@ -136,11 +136,11 @@
 }
 
 .tbIndicator {
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: var(--playerbar);
     border: 3px solid white;
-    margin-left: 8px;
+    margin-left: 6px;
     box-shadow: 0 0 0 3px var(--playerbar);
 }

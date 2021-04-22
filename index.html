@@ -68,8 +68,19 @@
 
     <div class="main">
         <div class="mainHead" id="mainHead">My music</div>
-        <div class="mainTab" id="mainMM">My music tab</div>
-        <div class="mainTab" id="mainRP">Recently played tab</div>
+        <div class="mainTab" id="mainMM">
+            <div class="mmmTabBar">
+                <div class="tbBtn tbbSongs" id="tbbSongs" onclick="tbBtn1()">Songs</div>
+                <div class="tbBtn tbbArtists" id="tbbArtists" onclick="tbBtn2()">Artists</div>
+                <div class="tbBtn tbbAlbums" id="tbbAlbums" onclick="tbBtn3()">Albums</div>
+            </div>
+        </div>
+        <div class="mainTab" id="mainRP">
+            <div class="rpShuffle">
+                <div class="rpsIcon"></div>
+                <div class="rpsText">Shuffle all music</div>
+            </div>
+        </div>
         <div class="mainTab" id="mainNP">Now playing tab</div>
         <div class="mainTab" id="mainPL">Playlists tab</div>
         <div class="mainTab" id="mainST">?SETTINGS tab</div>
@@ -86,7 +97,7 @@
         </div>
         <div class="songControls">
             <div class="scTop">
-                <div class="sctButton sctShuffle">ﮟ</div>
+                <div class="sctButton sctShuffle"></div>
                 <div class="sctButton sctPrev"></div>
                 <div class="sctButton sctPlayPause"></div>
                 <div class="sctButton sctNext"></div>
@@ -235,6 +246,34 @@
                 /**/
             document.getElementById('sbisExp').style.display = "none"
             document.getElementById('sbisCol').style.display = "inline-flex"
+        }
+
+        function tbBtn1() {
+            document.getElementById('tbbSongs').style.borderBottom = "2px solid var(--accent)"
+            document.getElementById('tbbArtists').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbAlbums').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbSongs').style.opacity = "1"
+            document.getElementById('tbbArtists').style.opacity = ".8"
+            document.getElementById('tbbAlbums').style.opacity = ".8"
+        }
+
+        function tbBtn2() {
+            document.getElementById('tbbSongs').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbArtists').style.borderBottom = "2px solid var(--accent)"
+            document.getElementById('tbbAlbums').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbSongs').style.opacity = ".8"
+            document.getElementById('tbbArtists').style.opacity = "1"
+            document.getElementById('tbbAlbums').style.opacity = ".8"
+        }
+
+        function tbBtn3() {
+            document.getElementById('tbbSongs').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbArtists').style.borderBottom = "2px solid transparent"
+            document.getElementById('tbbAlbums').style.borderBottom = "2px solid var(--accent)"
+            document.getElementById('tbbSongs').style.opacity = ".8"
+            document.getElementById('tbbArtists').style.opacity = ".8"
+            document.getElementById('tbbAlbums').style.opacity = "1"
+
         }
     </script>
 
