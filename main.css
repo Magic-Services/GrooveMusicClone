@@ -6,6 +6,7 @@
         --text: hsl(0, 0%, 100%);
         --btn-hover: hsl(100, 100%, 100%, .1);
         --sidebar: hsl(0, 0%, 17%);
+        --playerbar: hsl(160, 23%, 30%);
     }
 }
 
@@ -17,6 +18,7 @@
         --text: hsl(0, 0%, 0%);
         --btn-hover: hsl(0, 0%, 0%, .1);
         --sidebar: hsl(0, 0%, 95%);
+        --playerbar: hsl(160, 23%, 46%);
     }
 }
 
